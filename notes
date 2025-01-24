@@ -1,21 +1,21 @@
-b. איזה קשרים יש בין הטבלאות הטבאלות: יחיד ליחיד? יחיד לרבים? רבים לרבים?
+**b. What are the relationships between the tables: One-to-One? One-to-Many? Many-to-Many?**
 
-1. products ל-category:
-קשר: יחיד לרבים (One-to-Many) (products one to many category)
-הסבר: לכל מוצר יש קטגוריה אחת, לכל קטגוריה יש הרבה פריטים
+1. **products to category**  
+   Relationship: One-to-Many.  
+   Explanation: Each product belongs to one category, but each category can include multiple products.  
 
-2. products ל-nutritions:
-קשר: יחיד ליחיד או יחיד לרבים (One-to-One או One-to-Many).
-הסבר: כל מוצר יכול להכיל ערך תזונתי אחד או יותר.
+2. **products to nutritions**  
+   Relationship: One-to-One or One-to-Many.  
+   Explanation: Each product can have one or more nutritional values.  
 
-3.orders ל-orders_products:
-קשר: יחיד לרבים (One-to-Many).
-הסבר: כל הזמנה יכולה לכלול מספר שורות בטבלת orders_products, שכל שורה מייצגת מוצר אחד בהזמנה.
+3. **orders to orders_products**  
+   Relationship: One-to-Many.  
+   Explanation: Each order can include multiple rows in the `orders_products` table, with each row representing one product in the order.  
 
-4.products ל-orders_products:
-קשר: יחיד לרבים (One-to-Many).
-הסבר: כל מוצר יכול להופיע במספר שורות בטבלת orders_products, המייצגות הזמנות שונות שבהן המוצר נכלל.
+4. **products to orders_products**  
+   Relationship: One-to-Many.  
+   Explanation: Each product can appear in multiple rows in the `orders_products` table, representing different orders that include the product.  
 
-5.orders ל-products (דרך orders_products)
-קשר: רבים לרבים (Many-to-Many). הסבר: כל הזמנה יכולה להכיל מספר מוצרים, וכל מוצר יכול להיכלל במספר הזמנות.
-
+5. **orders to products (via orders_products)**  
+   Relationship: Many-to-Many.  
+   Explanation: Each order can include multiple products, and each product can be part of multiple orders.  
